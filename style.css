@@ -1,3 +1,47 @@
 html,body {
     font-family: "Open Sans", serif !important;
 }
+
+/* Navbar Styles */
+.navbar-bg {
+    position: fixed; 
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.3); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    z-index: 1000; 
+}
+
+/* Hero Section Styles */
+.hero-section-bg {
+    background-image: url('assets/images/wallhaven-85yl61.png'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.custom-heading {
+    font-size: 5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Focus Sounds Section Styles */
+.btn-custom {
+    background: transparent;
+    border: none;
+    font-size: 4rem;
+    color: white;
+    opacity: 0.8;
+}
+
+
