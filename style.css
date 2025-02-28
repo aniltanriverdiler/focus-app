@@ -98,7 +98,7 @@ input[type="range"].form-range:hover::-ms-thumb {
 
 /* Hero Section Styles */
 .hero-section-bg {
-  background-image: url("assets/images/wallhaven-85yl61.png");
+  background-image: url("assets/img/wallhaven-85yl61.png");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -123,3 +123,8 @@ input[type="range"].form-range:hover::-ms-thumb {
   color: white;
   opacity: 0.8;
 }
+
+audio {
+  display: none;
+}
+
