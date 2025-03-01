@@ -86,6 +86,47 @@ function toggleFireSound() {
     }
 }
 
+// Volume Slider and Mute Button Sections
+const rainSoundAudio = document.getElementById("rain-sound-audio");
+const thunderSoundAudio = document.getElementById("thunder-sound-audio");
+const wavesSoundAudio = document.getElementById("waves-sound-audio");
+const windSoundAudio = document.getElementById("wind-sound-audio");
+const fireSoundAudio = document.getElementById("fire-sound-audio");
+
+const audioPlayers = [rainSoundAudio, thunderSoundAudio, wavesSoundAudio, windSoundAudio, fireSoundAudio];
+
+const volumeSlider = document.getElementById("volume-slider");
+const muteButton = document.getElementById("mute-button");
+
+let previousVolume = 1;
+
+volumeSlider.addEventListener('input', () => {
+    let volumeValue = volumeSlider.value;
+    audioPlayers.forEach(audio => {
+        audio.volume = volumeValue;
+    });
+
+    if (volumeValue > 0) {
+        muteButton.textContent = "Mute";
+    }
+});
+
+muteButton.addEventListener('click', () => {
+    if (audioPlayers[0].volume > 0) {
+        previousVolume = volumeSlider.value;
+        audioPlayers.forEach(audio => {
+            audio.volume = 0;
+        });
+        volumeSlider.value = 0;
+        muteButton.textContent = "Unmute";
+    } else {
+        audioPlayers.forEach(audio => {
+            audio.volume = previousVolume;
+        });
+        volumeSlider.value = previousVolume;
+        muteButton.textContent = "Mute";
+    }
+});
 
 
 
